@@ -1,0 +1,298 @@
+﻿/* ОБОЛОЧКА */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    min-width: 550px;
+    height: auto;
+    display:flex;
+    justify-content:center;
+}
+
+a:link, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+#submit {
+    cursor: pointer;
+    color: #20b47c;
+    background:white;
+    border:0;
+}
+
+.header-menu {
+    flex-basis: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+    .header-menu ul {
+        display: inline-flex;
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 20px;
+    }
+
+        .header-menu ul li:hover {
+            border-bottom: 2px dashed #20b47c;
+        }
+
+        .header-menu ul li {
+            height: min-content;
+            cursor: pointer;
+            color: #20b47c;
+        }
+
+
+.header-icon {
+    width: 80px;
+    height: 80px;
+    background: orange;
+    margin-left: 20px;
+}
+
+.container {
+    width: 1300px;
+    min-width: 550px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    width: 100%;
+    height: 80px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.main-item {
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 30px
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    background: grey;
+    border-radius: 20px;
+}
+
+.name {
+}
+
+.btn {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    font-variant: small-caps;
+}
+
+.btn-buy {
+    padding: 5px;
+    background: orangered;
+    flex-basis: 48%;
+    text-align: center;
+}
+
+.btn-izbr {
+    flex-basis: 48%;
+    background: #20b47c;
+}
+    .btn-izbr a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+    }
+
+.footer {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        height: 60px;
+        background: #20b47c;
+}
+
+.footer-container {
+    width: 100%;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#link {
+    cursor: pointer;
+    color: #20b47c;
+}
+/* ОБОЛОЧКА */
+
+/* ИНДЕКС */
+
+.index {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.index1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.index-container {
+    height: 500px;
+    width: 100%;
+    background: url('Images/fon1.jpg');
+    background-attachment: fixed;
+}
+
+.description-first-index {
+    width: 100%;
+    height: 100%;
+    background: rgba(78, 78, 78, 0.894);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-center-index {
+    padding: 10px;
+    font-size: 25px;
+    font-variant: small-caps;
+    color: white;
+    background: orangered;
+}
+
+.index1-mainflex {
+    display: inline-flex;
+    height: 400px;
+    width: 100%;
+    background: url('Images/left.jpg');
+    background-origin: center center;
+}
+
+.mainflex1 {
+    flex-basis: 50%;
+    height: 100%;
+    background: rgba(255, 145, 0, 0.15);
+}
+
+.mainflex2 {
+    flex-basis: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.274);
+}
+
+.index-title {
+    color: white;
+    font-variant: small-caps;
+}
+
+.index1-container {
+    height: 400px;
+    width: 100%;
+}
+
+.index2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.index2-container {
+    width: 100%;
+    height: 800px;
+    background: url('Images/fon2.jpg');
+    background-size: cover;
+}
+
+.index2-content {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.637);
+}
+
+.index2-info {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.info {
+    width: 50%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#font {
+    font-size: 120px;
+    color: rgb(0, 255, 213);
+}
+
+.title, .description {
+    color: white;
+    font-size: 22px;
+    font-variant: small-caps;
+}
+
+.title {
+    letter-spacing: 4px;
+}
+/* ИНДЕКС */

@@ -1,0 +1,39 @@
+﻿@model List<TypesSketch>
+<div class="form-addsketch">
+    <h2 id="success"></h2>
+    @using (Ajax.BeginForm("FormAddSketch", null ,new AjaxOptions() { UpdateTargetId = "", OnSuccess= "SuccessAdd", HttpMethod="Get" }, htmlAttributes: new { name = "form" }))
+    {   
+        <div>
+            <label>Наименование</label>
+            <input name="name" id="sketch" type="text" required/>
+        </div>
+        <div>
+            <label>Тип эскиза</label>
+            <select name="typesketch" required>
+                @foreach (TypesSketch s in Model)
+                {
+                    <option value="@s.idTypeSketch">@s.Name</option>
+                }
+            </select>
+        </div>
+        <div>
+            <label>Материал</label>
+            <input name="material" id="sketch" type="text" required/>
+        </div>
+        <div>
+            <label>Стоимость</label>
+            <input name="cost" id="sketch" type="number" required/>
+        </div>
+        <div>
+            <label>Изображение</label>
+            <input name="image" id="sketch" type="file" />
+        </div>
+        <div>
+            <label>Описание</label>
+            <input name="desc" id="sketch" type="text" required/>
+        </div>
+        <div style="justify-content:center">
+            <input type="submit" value="Добавить" required/>
+        </div>
+    }
+</div>

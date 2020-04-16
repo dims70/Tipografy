@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <title>Панель</title>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-form">
+            <div class="modal-header">
+                <a style="margin-left:20px;">Редактирование</a>
+                <a style="margin-right:20px;">x</a>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>
+                        <span>Логин</span>
+                    </li>
+                    <li>
+                        <input type="text" placeholder="Введите логин">
+                    </li>
+                    <li>
+                        <span>Пароль</span>
+                    </li>
+                    <li>
+                        <input type="password" placeholder="Введите пароль">
+                    </li>
+                    <li>
+                        <input type="submit" value="Сохранить">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        @RenderBody()
+        <div class="main">
+            <div class="aside">
+                <ul>
+                    <li>
+                        @using (Ajax.BeginForm("../Content/Statistic", new AjaxOptions() { UpdateTargetId = "result" }))
+                        {
+                            <input type="submit" value="Пользователи" class="menu" />
+                        }
+                    </li>
+                    <li>
+                        @using (Ajax.BeginForm("../Content/Content", new AjaxOptions() { UpdateTargetId = "result" }))
+                        {
+                            <input type="submit" value="Содержание" class="menu" />
+                        }
+                    </li>
+                    <li>
+                        <a href="">Меню 3</a>
+                    </li>
+                    <li>
+                        <a href="">Меню 4</a>
+                    </li>
+                    <li>
+                        <a href="">Меню 5</a>
+                    </li>
+                    <li>
+                        <a href="">Меню 6</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="main-r" id="result">
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </div>
+    @Scripts.Render("~/JavaScript/jquery-3.3.1.js")
+    @Scripts.Render("~/JavaScript/jquery.unobtrusive-ajax.js")
+</body>
+</html>
+
+

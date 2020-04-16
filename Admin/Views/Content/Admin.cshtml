@@ -1,0 +1,96 @@
+﻿@{ 
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/admin.css">
+    <title>Панель</title>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-form">
+            <div class="modal-header">
+                <a style="margin-left:20px;">Редактирование</a>
+                <a style="margin-right:20px; cursor:pointer" id="exitmodal">x</a>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li>
+                        <span>Наименование</span>
+                    </li>
+                    <li>
+                        <input id="name" type="text" placeholder="Наименование" value="" required>
+                    </li>
+                    <li>
+                        <span>Материал</span>
+                    </li>
+                    <li>
+                        <input id="material" type="text" placeholder="Материал" value="">
+                    </li>
+                    <li>
+                        <span>Стоимость</span>
+                    </li>
+                    <li>
+                        <input id="cost" type="text" placeholder="Стоимость" value="">
+                    </li>
+                    <li>
+                        <span>Описание</span>
+                    </li>
+                    <li>
+                        <input id="desk" type="text" placeholder="Описание" value="">
+                    </li>
+                    <li>
+                        <img src="#" alt="изображки пака ниту" />
+                    </li>
+                    <li>
+                        <input type="submit" value="Сохранить">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="main">
+            <div class="aside">
+                <ul>
+                    <li>
+                        <a id="stats">Статистика</a>
+                    </li>
+                    <li>
+                        <a id="content">Эскизы</a>
+                    </li>
+                    <li>
+                        <a id="">Типы эскизов</a>
+                    </li>
+                    <li>
+                        <a id="">Заказы</a>
+                    </li>
+                    <li>
+                        <a id="">Поддержка</a>
+                    </li>
+                    <li>
+                        <a id="">Настройки(скоро)</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-r">
+                <div>
+                    <h1>Панель управления контентом</h1>
+                </div>
+                <div>
+                    <h2>Выберите соответствующий пункт меню для начала работы.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-title">Version 1.0x</div>
+        </div>
+    </div>
+    @Scripts.Render("~/JavaScript/jquery-3.3.1.js")
+    @Scripts.Render("~/JavaScript/jquery.unobtrusive-ajax.js")
+    @Scripts.Render("~/JavaScript/AdminAJAX.js")
+</body>
+</html>

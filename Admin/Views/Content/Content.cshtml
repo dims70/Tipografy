@@ -1,0 +1,43 @@
+﻿@model List<Sketchs>
+<div class="content">
+        <div class="stats-text">
+            <div>
+                <h1>
+                    Работа с эскизами
+                </h1>
+            </div> 
+    </div>
+</div>
+<div class="statistic">
+    <div class="addsketch">
+        <h3 align="center">Добавить эскиз</h3>
+        @Html.Partial("FormAddSketch", new TipographyContext().TypesSketch.ToList())
+    </div>
+    <div class="table">
+        <h3 align="center">Список эскизов</h3>
+        <table border="1">
+            <tr>
+                <td>Удалить</td>
+                <td>Название</td>
+                <td>Тип эскиза</td>
+                <td>Материал</td>
+                <td>Стоимость</td>
+                <td>Описание</td>
+                <td>Редактировать</td>
+            </tr>
+            @foreach (Sketchs t in Model)
+            {
+                <tr>
+                    <td style="background:black"><span style="color:white;font-size:20px;background:black;cursor:pointer" data-id="@t.idSketch" id="delsketch">x</span></td>
+                    <td>@t.Name</td>
+                    <td>@(new TipographyContext().TypesSketch.Where(x => x.idTypeSketch == t.idTypeSketch).First().Name)</td>
+                    <td>@t.Material</td>
+                    <td>@t.Cost</td>
+                    <td>@t.Description</td>
+                    <td style="background-color:brown"><span style="cursor:pointer;color:white" data-id="@t.idSketch" id="formatsketch">Ред.</span></td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+

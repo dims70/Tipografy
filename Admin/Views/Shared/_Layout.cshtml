@@ -1,0 +1,49 @@
+﻿@using Admin.Models
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <title>Каталог</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="header-container">
+                    <div class="header-icon">
+
+                    </div>
+                    <div class="header-menu">
+                        <ul>
+                            <li>@Html.ActionLink("ГЛАВНАЯ", "Index", new { controller = "Home" }, new { id = "link" })</li>
+                            <li>ПРАЙС</li>
+                            <li>
+                                @using (Ajax.BeginForm("Catalog", new AjaxOptions() { UpdateTargetId = "result" }))
+                                {
+                                    <input type="submit" value="КАТАЛОГ" id="submit" />
+                                }
+                            </li>
+                            <li>О НАС</li>
+                            <li><a href="/Home/favorites">ИЗБРАННОЕ</a> (<span id="countCart">@Cart.CartCount()</span>)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="result">@RenderBody()</div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-container">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/JavaScript/jquery-3.3.1.js")
+    @Scripts.Render("~/JavaScript/jquery.unobtrusive-ajax.js")
+    @Scripts.Render("~/JavaScript/CartFavoritesAJAX.js")
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿@model List<Table>
+<div class="counter">
+    <div class="stats-text">
+        <div>
+            <h1>
+                Статистика сайта
+            </h1>
+        </div>
+        <div class="stat-counter">
+            <h1 style="color:green">Уникальные</h1>
+            <h1 style="color:orange">За сегодня</h1>
+            <h1 style="color:brown">Активные</h1>
+        </div>
+        <div class="stat-counter">
+            <h1 style="color:green">10</h1>
+            <h1 style="color:orange">20</h1>
+            <h1 style="color:brown">30</h1>
+        </div>
+    </div>
+</div>
+
+<div class="statistic">
+    <div class="table">
+        <table border="1">
+            <tr>
+                <td>ID</td>
+                <td>IP Адрес</td>
+                <td>User Agent</td>
+            </tr>
+            @foreach (Table t in Model)
+            {
+                <tr>
+                    <td>@t.Id</td>
+                    <td>@t.ip</td>
+                    <td>@t.userAgent</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
