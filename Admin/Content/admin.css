@@ -166,13 +166,26 @@ h2,h3{
     z-index: 999;
 }
 
-.modal-form {
-    width: 300px;
-    height: 400px;
-    background: white;
-    border-radius: 20px;
+.modal1 {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
     position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    z-index: 999;
+    top:0;
 }
+
+    .modal-form {
+        width: 300px;
+        height: 400px;
+        background: white;
+        border-radius: 20px;
+        position: fixed;
+    }
 
 .modal-header {
     display: inline-flex;
@@ -201,3 +214,30 @@ h2,h3{
     .modal-body ul li {
         margin-top: 10px;
     }
+#userinfo {
+    font-variant:small-caps;
+    cursor:pointer;
+    position:relative;
+}
+.endorder {
+    color:white;
+    font-size:20px;
+    background:black;
+    cursor:pointer;
+}
+.data-user{
+    display:none;
+    position:absolute;
+    background-color:cadetblue;
+    border-radius:20px;
+}
+.data-user ul {
+    padding-left:0;
+    list-style:none;
+}
+
+#answerq {
+    position:fixed;
+    width:100%;
+    height:100%;
+}

@@ -76,7 +76,6 @@ C:\Users\Димас\source\repos\Admin\Admin\bin\ru\System.Web.Razor.resources.d
 C:\Users\Димас\source\repos\Admin\Admin\bin\ru\System.Web.WebPages.resources.dll
 C:\Users\Димас\source\repos\Admin\Admin\bin\ru\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Димас\source\repos\Admin\Admin\bin\ru\System.Web.WebPages.Razor.resources.dll
-C:\Users\Димас\source\repos\Admin\Admin\obj\Debug\Admin.csprojAssemblyReference.cache
 C:\Users\Димас\source\repos\Admin\Admin\obj\Debug\Admin.csproj.CoreCompileInputs.cache
 C:\Users\Димас\source\repos\Admin\Admin\obj\Debug\Admin.csproj.CopyComplete
 C:\Users\Димас\source\repos\Admin\Admin\obj\Debug\Admin.dll
@@ -87,5 +86,6 @@ C:\Users\Димас\source\repos\Admin\Admin\bin\EntityFramework.xml
 C:\Users\Димас\source\repos\Admin\Admin\bin\EntityFramework.SqlServer.xml
 C:\Users\Димас\source\repos\Admin\Admin\bin\ru\EntityFramework.resources.dll
 C:\Users\Димас\source\repos\Admin\Admin\bin\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Димас\source\repos\Admin\Admin\obj\Debug\Admin.csprojAssemblyReference.cache
 C:\Users\Димас\source\repos\Admin\Admin\obj\Debug\Admin.Migrations.Initial.resources
 C:\Users\Димас\source\repos\Admin\Admin\obj\Debug\Admin.csproj.GenerateResource.cache

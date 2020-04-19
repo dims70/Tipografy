@@ -1,0 +1,9 @@
+C:\Users\Димас\source\repos\Admin\TestConsole\bin\Debug\TestConsole.exe.config
+C:\Users\Димас\source\repos\Admin\TestConsole\bin\Debug\TestConsole.exe
+C:\Users\Димас\source\repos\Admin\TestConsole\bin\Debug\TestConsole.pdb
+C:\Users\Димас\source\repos\Admin\TestConsole\obj\Debug\TestConsole.csprojAssemblyReference.cache
+C:\Users\Димас\source\repos\Admin\TestConsole\obj\Debug\TestConsole.csproj.CoreCompileInputs.cache
+C:\Users\Димас\source\repos\Admin\TestConsole\obj\Debug\TestConsole.exe
+C:\Users\Димас\source\repos\Admin\TestConsole\obj\Debug\TestConsole.pdb
+C:\Users\Димас\source\repos\Admin\TestConsole\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Димас\source\repos\Admin\TestConsole\obj\Debug\TestConsole.csproj.CopyComplete

@@ -33,16 +33,6 @@ namespace Admin
         [StringLength(20)]
         public string PhoneNumber { get; set; }
 
-        [Required]
-        [StringLength(20)]
-        public string CardNumber { get; set; }
-
-        public DateTime DateEndCard { get; set; }
-
-        [Required]
-        [StringLength(3)]
-        public string CVC { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Callback> Callback { get; set; }
 

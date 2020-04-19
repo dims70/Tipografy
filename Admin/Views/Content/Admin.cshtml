@@ -18,36 +18,42 @@
             </div>
             <div class="modal-body">
                 <ul>
-                    <li>
-                        <span>Наименование</span>
-                    </li>
-                    <li>
-                        <input id="name" type="text" placeholder="Наименование" value="" required>
-                    </li>
-                    <li>
-                        <span>Материал</span>
-                    </li>
-                    <li>
-                        <input id="material" type="text" placeholder="Материал" value="">
-                    </li>
-                    <li>
-                        <span>Стоимость</span>
-                    </li>
-                    <li>
-                        <input id="cost" type="text" placeholder="Стоимость" value="">
-                    </li>
-                    <li>
-                        <span>Описание</span>
-                    </li>
-                    <li>
-                        <input id="desk" type="text" placeholder="Описание" value="">
-                    </li>
-                    <li>
-                        <img src="#" alt="изображки пака ниту" />
-                    </li>
-                    <li>
-                        <input type="submit" value="Сохранить">
-                    </li>
+                    @using (Ajax.BeginForm("editsketch", "Content", new AjaxOptions() {  OnSuccess="editsketch"}))
+                    {
+                        <li>
+                            <span>Наименование</span>
+                        </li>
+                        <li>
+                            <input id="name" name="name" type="text" placeholder="Наименование" value="" required>
+                        </li>
+                        <li>
+                            <span>Материал</span>
+                        </li>
+                        <li>
+                            <input id="material" name="material" type="text" placeholder="Материал" value="" required>
+                        </li>
+                        <li>
+                            <span>Стоимость</span>
+                        </li>
+                        <li>
+                            <input id="cost" name="cost" type="number" placeholder="Стоимость" value="" required>
+                        </li>
+                        <li>
+                            <span>Описание</span>
+                        </li>
+                        <li>
+                            <input id="desc" name="desc" type="text" placeholder="Описание" value="" required>
+                        </li>
+                        <li>
+                            <img src="#" alt="изображки пака ниту" />
+                        </li>
+                        <li>
+                            <input type="hidden" id="idsketch" name="idsketch" value="" />
+                            <input type="hidden" id="typesketch" name="idtypesketch" value="" />
+                            <input type="submit" id="saveeditsketch" value="Сохранить">
+                        </li>
+                        <li id="save"></li>
+                    }
                 </ul>
             </div>
         </div>
@@ -57,22 +63,22 @@
             <div class="aside">
                 <ul>
                     <li>
-                        <a id="stats">Статистика</a>
+                        <a id="stats" style="cursor:pointer">Статистика</a>
                     </li>
                     <li>
-                        <a id="content">Эскизы</a>
+                        <a id="content" style="cursor:pointer">Эскизы</a>
                     </li>
                     <li>
-                        <a id="">Типы эскизов</a>
+                        <a id="typesk" style="cursor:pointer">Типы эскизов</a>
                     </li>
                     <li>
-                        <a id="">Заказы</a>
+                        <a id="orders" style="cursor:pointer">Заказы</a>
                     </li>
                     <li>
-                        <a id="">Поддержка</a>
+                        <a id="callback" style="cursor:pointer">Поддержка</a>
                     </li>
                     <li>
-                        <a id="">Настройки(скоро)</a>
+                        <a id="" style="cursor:pointer">Настройки(скоро)</a>
                     </li>
                 </ul>
             </div>
@@ -87,6 +93,27 @@
         </div>
         <div class="footer">
             <div class="footer-title">Version 1.0x</div>
+        </div>
+    </div>
+    <div class="modal1">
+        <div class="modal-form">
+            <div class="modal-header">
+                <a style="margin-left:20px;">Ответ пользователю</a>
+                <a style="margin-right:20px; cursor:pointer" id="exitmodal1">x</a>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    @using (Ajax.BeginForm("answerquest", "Content", new AjaxOptions() { OnSuccess = "" }))
+                    {
+                        <li>
+                            <textarea name="mail" id="mail" cols="20" rows="10"></textarea>
+                        </li>
+                        <li>
+                            <input type="submit" id="requestanswer" value="Отправить">
+                        </li>
+                    }
+                </ul>
+            </div>
         </div>
     </div>
     @Scripts.Render("~/JavaScript/jquery-3.3.1.js")

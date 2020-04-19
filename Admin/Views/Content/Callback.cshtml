@@ -1,0 +1,18 @@
+﻿<div class="table">
+    <h3 align="center">Вопросы пользователей</h3>
+    <table border="1">
+        <tr>
+            <td>Имя пользователя</td>
+            <td>Вопрос</td>
+            <td>Отправить ответ</td>
+        </tr>
+        @foreach (Callback c in new TipographyContext().Callback.ToList())
+        {
+            <tr>
+                <td>@(new TipographyContext().Users.Find(c.idUser).Name)</td>
+                <td>@c.Question</td>
+                <td style="background-color:brown"><span style="cursor:pointer;color:white" data-id="@c.idCallback" data-name="@(new TipographyContext().Users.Find(c.idUser).Name)" id="answer">Ответить</span></td>
+            </tr>
+        }
+    </table>
+</div>

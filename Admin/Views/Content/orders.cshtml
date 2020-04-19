@@ -1,0 +1,41 @@
+﻿<div class="table">
+    <h3 align="center">Список заказов пользователей</h3>
+    <table border="1">
+        <tr>
+            <td>Зав.</td>
+            <td>Данные пользователя</td>
+            <td>Дата</td>
+            <td>Эскиз</td>
+            <td>Размер</td>
+            <td>Количество</td>
+            <td>Почта</td>
+            <td>Тип доставки</td>
+            <td>Сумма</td>
+            <td>Комментарий</td>
+        </tr>
+        @foreach (Orders o in new TipographyContext().Orders.ToList())
+        { var user = new TipographyContext().Users.Find(o.idUser);
+        <tr>
+            <td style="background:black"><span class="endorder" data-id="@o.idOrder">Зав.</span></td>
+            <td><span id="userinfo" data-id="@o.idUser">просмотр
+                </span>
+                       <div class="data-user">
+                           <ul>
+                               <li>ФИО:<span>@user.Surname @user.Name @user.Patronymic</span></li>
+                               <li>Номер телефона:<span>@user.PhoneNumber</span></li>
+                           </ul>
+                       </div>
+            </td>
+            <td>@o.Date</td>
+            <td><span id="sketch" data-id="@o.idSketch">Эскиз</span></td>
+            <td>@o.Size</td>
+            <td>@o.Number</td>
+            <td>@o.Email</td>
+            <td>@(new TipographyContext().TypeDelivery.Find(o.idTypeDelivery).Name)</td>
+            <td>@o.Sum</td>
+            <td>@o.Description</td>
+
+        </tr>
+        }
+    </table>
+</div>

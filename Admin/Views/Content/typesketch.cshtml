@@ -1,0 +1,35 @@
+﻿<div class="table">
+    <h3 align="center">Типы эскизов</h3>
+    <table border="1">
+        <tbody id="addtype">
+            <tr>
+                <td>Удалить</td>
+                <td>Название</td>
+            </tr>
+            @foreach (TypesSketch t in new TipographyContext().TypesSketch.ToList())
+            {
+                <tr id="@t.idTypeSketch">
+                    <td style="background:black">
+                        <span style="color:white;font-size:20px;background:black;cursor:pointer" data-id="@t.idTypeSketch" id="deltypesketch">
+                            @Ajax.ActionLink("x","/deltypesk",
+                          new  { id = t.idTypeSketch },
+                           new AjaxOptions() {  OnSuccess=$"Mess('Эскиз удален','{t.idTypeSketch}')",
+                               HttpMethod ="Get"})
+                        </span>
+                    </td>
+                    <td>@t.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="table">
+    <h3 align="center">Добавить тип эскиза</h3>
+    @using (Ajax.BeginForm("/addtypesk", new AjaxOptions() { UpdateTargetId="addtype",
+        OnSuccess ="AddTypeSkSuccess",
+        InsertionMode = InsertionMode.InsertAfter}))
+    {
+    <input name="name" type="text" />
+    <input type="submit" value="Добавить"/>
+    }
+</div>

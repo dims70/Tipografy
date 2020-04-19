@@ -130,7 +130,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="EntityFrameworkClasses\Authorization.cs" />
     <Compile Include="EntityFrameworkClasses\Callback.cs" />
-    <Compile Include="EntityFrameworkClasses\Colors.cs" />
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="EntityFrameworkClasses\Table.cs" />
@@ -138,9 +137,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="EntityFrameworkClasses\Orders.cs" />
-    <Compile Include="Migrations\202004151005300_Initial.cs" />
-    <Compile Include="Migrations\202004151005300_Initial.Designer.cs">
-      <DependentUpon>202004151005300_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202004181440347_Initial.cs" />
+    <Compile Include="Migrations\202004181440347_Initial.Designer.cs">
+      <DependentUpon>202004181440347_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -204,10 +203,13 @@
     <Content Include="Views\Content\Admin.cshtml" />
     <Content Include="Views\Home\Catalog.cshtml" />
     <Content Include="Views\Content\FormAddSketch.cshtml" />
+    <Content Include="Views\Content\typesketch.cshtml" />
+    <Content Include="Views\Content\orders.cshtml" />
+    <Content Include="Views\Content\Callback.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202004151005300_Initial.resx">
-      <DependentUpon>202004151005300_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202004181440347_Initial.resx">
+      <DependentUpon>202004181440347_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

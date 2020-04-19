@@ -27,17 +27,12 @@ namespace Admin
         [StringLength(50)]
         public string Email { get; set; }
 
-        public int idColor { get; set; }
-
         public int idTypeDelivery { get; set; }
 
         [Column(TypeName = "money")]
         public decimal Sum { get; set; }
 
-        [Required]
         public string Description { get; set; }
-
-        public virtual Colors Colors { get; set; }
 
         public virtual Sketchs Sketchs { get; set; }
 

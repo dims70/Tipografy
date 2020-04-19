@@ -13,7 +13,6 @@ namespace Admin
         }
 
         public virtual DbSet<Callback> Callback { get; set; }
-        public virtual DbSet<Colors> Colors { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<Sketchs> Sketchs { get; set; }
         public virtual DbSet<TypeDelivery> TypeDelivery { get; set; }
@@ -24,15 +23,6 @@ namespace Admin
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Colors>()
-                .Property(e => e.ColorCode16)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Colors>()
-                .HasMany(e => e.Orders)
-                .WithRequired(e => e.Colors)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<Orders>()
                 .Property(e => e.Size)
                 .IsUnicode(false);
@@ -74,15 +64,6 @@ namespace Admin
 
             modelBuilder.Entity<Users>()
                 .Property(e => e.PhoneNumber)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Users>()
-                .Property(e => e.CardNumber)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Users>()
-                .Property(e => e.CVC)
-                .IsFixedLength()
                 .IsUnicode(false);
 
             modelBuilder.Entity<Users>()
