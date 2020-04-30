@@ -6,10 +6,10 @@
         <div class="index-container">
             <div class="description-first-index">
                 <div class="index-title">
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, beatae provident? </h2>
+                    <h2 align="center">любой эскиз из нашего каталога - с вас желание, с нас качество. </h2>
                 </div>
                 <div class="block-center-index">
-                    <a href="">подробнее</a>
+                    <a id="full" style="cursor:pointer">подробнее</a>
                 </div>
             </div>
         </div>
@@ -19,20 +19,36 @@
     <div class="container">
         <div class="index1-container">
             <div class="index1-mainflex">
-                <div class="mainflex1">
-
+                <div class="index1-flex-item">
+                    <h1 style="color:white;margin-bottom:0">Мы предлагаем вам:</h1>
                 </div>
-                <div class="mainflex2">
-
+                <div class="index1-flex-item">
+                    <div class="index1-flex-item-icon"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
+                    <div class="index1-flex-item-text"><span>ХОРОШО СОСТАВЛЕННЫЙ ПРАЙС-ЛИСТ СО ВСЕМИ УСЛУГАМИ ДЛЯ ФИЗИЧЕСКИХ МАГАЗИНОВ</span></div>
                 </div>
+                <div class="index1-flex-item">
+                    <div class="index1-flex-item-icon"><i class="fa fa-credit-card" aria-hidden="true"></i></div>
+                    <div class="index1-flex-item-text"><span>ВОЗМОЖНОСТЬ ОНЛАЙН-ОФОРМЛЕНИЯ И ОПЛАТЫ ПРИ ПОЛУЧЕНИИ</span></div>
+                </div>
+                <div class="index1-flex-item">
+                    <div class="index1-flex-item-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                    <div class="index1-flex-item-text"><span>ХОРОШАЯ ТЕХ.ПОДДЕРЖКА И ОБРАТНАЯ СВЯЗЬ</span></div>
+                </div>
+                <div class="index1-flex-item">
+                    <div class="index1-flex-item-icon"><i class="fa fa-bar-chart" aria-hidden="true"></i></div>
+                    <div class="index1-flex-item-text"><span>БОЛЬШОЕ КОЛИЧЕСТВО ЭЛЕМЕНТОВ ДИЗАЙНА. ЕЖЕДНЕВНО ДОБАВЛЯЕМЫЕ</span></div>
+                </div>
+            </div>
             </div>
         </div>
     </div>
-</div>
 <div class="index2">
     <div class="container">
         <div class="index2-container">
             <div class="index2-content">
+                <div>
+                    <h1 style="color:white;margin-bottom:0">Наше достояние:</h1>
+                </div>
                 <div class="index2-info">
                     <div class="info">
                         <div class="info-content">
@@ -41,7 +57,7 @@
                                 скорость
                             </div>
                             <div class="description">
-                                Описание
+                                быстрое создание, быстрая доставка
                             </div>
                         </div>
                     </div>
@@ -54,7 +70,7 @@
                                 надежность
                             </div>
                             <div class="description">
-                                Описание
+                                безопасно, и никакой химии
                             </div>
                         </div>
                     </div>
@@ -67,7 +83,7 @@
                                 качество
                             </div>
                             <div class="description">
-                                Описание
+                                лучшее качество только у нас
                             </div>
                         </div>
                     </div>
@@ -77,13 +93,16 @@
                                 <i class="fa fa-angle-double-down" aria-hidden="true" id="font"></i>
                             </div>
                             <div class="title">
-                                Название
+                                доступность
                             </div>
                             <div class="description">
-                                Описание
+                                доступное качество по доступной цене
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="block-center-index gocat">
+                    @Html.ActionLink("перейти в каталог", "Catalog" , null,htmlAttributes:new { style="cursor:pointer;color:white" })
                 </div>
             </div>
         </div>

@@ -1,4 +1,15 @@
-﻿$('#result').on('click','#favorites',function () {
+﻿$(document).ready(function () {
+    if (location.pathname == "/Home/favorites") {
+        $('.footer').css('position', 'fixed');
+    }
+    if (location.pathname == "/Home/Catalog") {
+        $('#result').css("background","white");
+    }
+    if (location.pathname.includes("/Home/Buy")) {
+        $('#result').css("background", getRandomColor());
+    }
+});
+$('#result').on('click', '#favorites', function () {
     var id = $(this).attr('data-id');
     var thiselem = $(this);
     if (id != '') {
@@ -27,3 +38,52 @@ $('#result').on('click', '#delfavorites', function () {
         });
     };
 });
+
+$('#full').click(function () {
+    $("html,body").animate({ scrollTop: $('.fa-fighter-jet').position().top},1000)
+});
+$('.topbody').on('click','#topbody',function () {
+    $('html,body').animate({ scrollTop: $('.wrapper').position().top }, 1000);
+});
+
+function scrollHead() {
+    $('html,body').animate({ scrollTop: $('.wrapper').position().top }, 1000);
+}
+
+$(window).scroll(function () {
+    if ($(window).scrollTop() != 0) {
+        $('.topbody').html("<span id='topbody'>НАВЕРХ</span>");
+    }
+    else {
+        $('.topbody').html('<span style="color:white">2020</span>')
+    }
+});
+$('#buyitem').click(function () {
+    $('.infobuy').slideToggle();
+    $('[name="date"]').val(getDate());
+    if ($('.infobuy').is(":visible")) {
+        $("html,body").animate({ scrollTop: $('[name="desc"]').position().top }, 1000);
+    }
+});
+$(window).resize(function () {
+    $('#result').css('height', 'max-content');
+});
+
+$("#formbuy").submit(function (e) {
+    e.preventDefault();
+    var b = $("#formbuy").serialize();
+    $.post("/Home/Buy", b, function () { $(".infobuy").html("<h2 style='color:black'>Покупка оформлена успешно</h2>"); });
+});
+function getDate() {
+    let c = new Date();
+    let day = c.getDate();
+    let month = c.getMonth();
+    let year = c.getFullYear();
+    return `${day}.${Number(month)+1}.${year}`;
+}
+function getRandomColor() {
+    return '#' + Math.floor((Math.random() * 2 ** 24)).toString(16).padStart(0, 6);
+}
+function ifselect() {
+    $('select').val() == 1 ? $('#deliv').text(500) : ($('select').val() == 2 ? $('#deliv').text(300) : $('#deliv').text(200));
+}

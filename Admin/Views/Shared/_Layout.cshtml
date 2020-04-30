@@ -14,19 +14,16 @@
             <div class="container">
                 <div class="header-container">
                     <div class="header-icon">
-
+                        <img src="~/Content/Images/logo.png" alt="Загрузка" width="80px" height="40px"/>
                     </div>
                     <div class="header-menu">
                         <ul>
                             <li>@Html.ActionLink("ГЛАВНАЯ", "Index", new { controller = "Home" }, new { id = "link" })</li>
-                            <li>ПРАЙС</li>
+                            <li>@Html.ActionLink("ПРАЙС", "price")</li>
                             <li>
-                                @using (Ajax.BeginForm("Catalog", new AjaxOptions() { UpdateTargetId = "result" }))
-                                {
-                                    <input type="submit" value="КАТАЛОГ" id="submit" />
-                                }
+                                @Html.ActionLink("КАТАЛОГ","Catalog")
                             </li>
-                            <li>О НАС</li>
+                            <li>@Html.ActionLink("О НАС", "info")</li>
                             <li><a href="/Home/favorites">ИЗБРАННОЕ</a> (<span id="countCart">@Cart.CartCount()</span>)</li>
                         </ul>
                     </div>
@@ -37,7 +34,7 @@
         <div class="footer">
             <div class="container">
                 <div class="footer-container">
-
+                    <div class="topbody"></div>
                 </div>
             </div>
         </div>

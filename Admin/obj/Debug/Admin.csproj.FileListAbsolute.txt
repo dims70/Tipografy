@@ -86,6 +86,6 @@ C:\Users\Димас\source\repos\Admin\Admin\bin\EntityFramework.xml
 C:\Users\Димас\source\repos\Admin\Admin\bin\EntityFramework.SqlServer.xml
 C:\Users\Димас\source\repos\Admin\Admin\bin\ru\EntityFramework.resources.dll
 C:\Users\Димас\source\repos\Admin\Admin\bin\ru\EntityFramework.SqlServer.resources.dll
-C:\Users\Димас\source\repos\Admin\Admin\obj\Debug\Admin.csprojAssemblyReference.cache
 C:\Users\Димас\source\repos\Admin\Admin\obj\Debug\Admin.Migrations.Initial.resources
 C:\Users\Димас\source\repos\Admin\Admin\obj\Debug\Admin.csproj.GenerateResource.cache
+C:\Users\Димас\source\repos\Admin\Admin\obj\Debug\Admin.csprojAssemblyReference.cache

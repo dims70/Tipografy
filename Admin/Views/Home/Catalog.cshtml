@@ -1,21 +1,24 @@
-﻿@using Admin.Models
+﻿@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Admin.Models
 @model List<Sketchs>
 <div class="main">
     <div class="container">
-        <h2 style="align-self: flex-start;margin-left:20px">Каталог</h2>
+        <h2 style="align-self: flex-start;margin-left:20px;font-variant:small-caps;letter-spacing:5px;color:brown">каталог</h2>
         <div class="main-container">
             @if (Model.Count != 0) { 
             foreach (Sketchs s in Model) {
             <div class="main-item">
                 <div class="photo">
-
+                    <img src="~/Images/@s.imagePath" alt="Загрузка..." width="200px" height="200px"/>
                 </div>
                 <div class="name">
                     @s.Name
                 </div>
                 <div class="btn">
                     <div class="btn-buy">
-                        <a href="/Home/Buy">купить</a>
+                        <a href="/Home/Buy/@s.idSketch" style="color:black">купить</a>
                     </div>
                     @if (ViewContext.RouteData.Values["action"].ToString() != "favorites")
                     {

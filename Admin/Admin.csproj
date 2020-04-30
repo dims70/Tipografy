@@ -160,12 +160,26 @@
     <Content Include="Content\Images\fon1.jpg" />
     <Content Include="Content\Images\fon2.jpg" />
     <Content Include="Content\Images\left.jpg" />
+    <Content Include="Content\Images\logo-info.png" />
+    <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\right.jpg" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\10.jpg" />
+    <Content Include="Images\2.gif" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
+    <Content Include="Images\5.jpg" />
+    <Content Include="Images\6.jpg" />
+    <Content Include="Images\7.jpg" />
+    <Content Include="Images\8.jpg" />
+    <Content Include="Images\9.jpg" />
+    <Content Include="Images\sketch-logo.png" />
     <Content Include="JavaScript\CartFavoritesAJAX.js" />
     <Content Include="JavaScript\jquery-3.3.1.js" />
     <Content Include="JavaScript\jquery.unobtrusive-ajax.js" />
@@ -206,12 +220,18 @@
     <Content Include="Views\Content\typesketch.cshtml" />
     <Content Include="Views\Content\orders.cshtml" />
     <Content Include="Views\Content\Callback.cshtml" />
+    <Content Include="Views\Home\info.cshtml" />
+    <Content Include="Views\Home\price.cshtml" />
+    <Content Include="Views\Home\Buy.cshtml" />
+    <Content Include="Views\Home\Error404.cshtml" />
+    <Content Include="Views\Shared\Error404.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202004181440347_Initial.resx">
       <DependentUpon>202004181440347_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

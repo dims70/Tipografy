@@ -1,0 +1,56 @@
+﻿@model Admin.Sketchs
+
+@{
+    ViewBag.Title = "Buy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="tovar-info">
+    <div class="image-item">
+        <img src="~/Images/@Model.imagePath" alt="" width="300px" height="300px">
+    </div>
+    <div class="item-info">
+        <h2>Наименование: @Model.Name</h2>
+        <h2>Тип: @(new TipographyContext().TypesSketch.Find(Model.idTypeSketch).Name)</h2>
+        <h2>Материал: @Model.Material</h2>
+        <h2>Описание: @Model.Description</h2>
+        <h2>Стоимость: @decimal.Parse(Model.Cost.ToString()) руб.</h2>
+        <h2>Если у вас есть вопросы, вы можете задать их <a href="/Home/info" style="text-decoration:underline">здесь</a></h2>
+        <h2>Если вас интересует вопрос о товаре, при обращении укажите ссылку на товар.</h2>
+        <button id="buyitem" style="height:40px;">Оформить покупку</button>
+    </div>
+    
+</div>
+<div class="infobuy">
+    <form method="post" id="formbuy">
+        <div>
+            <div>
+                <input type="hidden" name="idsketch" value="@Model.idSketch" />
+                <input type="text" name="surname" placeholder="Фамилия" required minlenght="2" />
+                <input type="text" name="name" placeholder="Имя" required />
+                <input type="text" name="patro" placeholder="Отчество" required />
+                <input type="number" name="phone" placeholder="Номер телефона" minlength="10" required />
+                <input type="text" name="date" readonly />
+            </div>
+            <div>
+                <input type="text" name="size" placeholder="Размер" required />
+                <input type="number" name="number" placeholder="Количество" max="10" oninput="$('#sum').val(Number($(this).val())*Number(@Model.Cost))" required />
+                <input type="email" name="email" placeholder="Почта для связи" required />
+                <select onchange="ifselect()" name="tpdelivery" required>
+                    <option value="0">Самовывоз</option>
+                    @foreach (var c in new TipographyContext().TypeDelivery)
+                    {
+                        <option value="@c.idTypeDelivery">@c.Name</option>
+                    }
+                </select>
+                <input type="text" name="sum" id="sum" placeholder="Итого" readonly />
+                
+            </div>
+        </div>
+        <div><h3 style="color:white">+<span id="deliv"></span>р. за доставку</h3></div>
+        <div style="display:inline-flex">
+            <input type="text" name="adr" placeholder="Полный адрес" required />
+            <textarea name="desc">Комментарий(необязательно)</textarea>
+            <button id="createorder">Отправить</button>
+        </div>
+    </form>
+    </div>
