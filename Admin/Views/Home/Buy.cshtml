@@ -6,17 +6,17 @@
 }
 <div class="tovar-info">
     <div class="image-item">
-        <img src="~/Images/@Model.imagePath" alt="" width="300px" height="300px">
+        <img src="~/Images/@Model.imagePath" alt="" width="500px" height="300px">
     </div>
     <div class="item-info">
-        <h2>Наименование: @Model.Name</h2>
-        <h2>Тип: @(new TipographyContext().TypesSketch.Find(Model.idTypeSketch).Name)</h2>
-        <h2>Материал: @Model.Material</h2>
-        <h2>Описание: @Model.Description</h2>
-        <h2>Стоимость: @decimal.Parse(Model.Cost.ToString()) руб.</h2>
-        <h2>Если у вас есть вопросы, вы можете задать их <a href="/Home/info" style="text-decoration:underline">здесь</a></h2>
-        <h2>Если вас интересует вопрос о товаре, при обращении укажите ссылку на товар.</h2>
-        <button id="buyitem" style="height:40px;">Оформить покупку</button>
+        <h2 style="border-bottom: 2px solid black;"><b>Наименование:</b> @Model.Name</h2>
+        <h2 style="border-bottom: 2px solid black;"><b>Тип:</b> @(new TipographyContext().TypesSketch.Find(Model.idTypeSketch).Name)</h2>
+        <h2 style="border-bottom: 2px solid black;"><b>Материал:</b> @Model.Material</h2>
+        <h2 style="border-bottom: 2px solid black;"><b>Описание:</b> <br />@Model.Description</h2>
+        <h2 style="border-bottom: 2px solid black;"><b>Стоимость:</b> @float.Parse(Model.Cost.ToString()) руб. за шт.</h2>
+        <h2 style="border-bottom: 2px solid black;">Если у вас есть вопросы, вы можете задать их <a href="/Home/info" style="text-decoration:underline">здесь</a></h2>
+        <h2 style="border-bottom: 2px solid black;">Если вас интересует вопрос о товаре, при обращении укажите ссылку на товар.</h2>
+        <button id="buyitem" style="height:40px;font-size:16px;border-radius: 20px;background: darkorange;align-self: center;width: 400px;"><b>Оформить покупку</b></button>
     </div>
     
 </div>

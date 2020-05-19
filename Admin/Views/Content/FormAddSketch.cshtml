@@ -1,7 +1,7 @@
 ﻿@model List<TypesSketch>
 <div class="form-addsketch">
     <h2 id="success"></h2>
-    @using (Ajax.BeginForm("FormAddSketch", null ,new AjaxOptions() { UpdateTargetId = "", OnSuccess= "SuccessAdd", HttpMethod="Get" }, htmlAttributes: new { name = "form" }))
+    @using (Ajax.BeginForm("FormAddSketch", null ,new AjaxOptions() { UpdateTargetId = "", OnSuccess= "SuccessAdd", HttpMethod="Post" }, htmlAttributes: new { name = "form", enctype="multipart/form-data" }))
     {   
         <div>
             <label>Наименование</label>

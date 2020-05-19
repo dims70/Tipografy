@@ -13,7 +13,7 @@
         <h3 align="center">Добавить эскиз</h3>
         @Html.Partial("FormAddSketch", new TipographyContext().TypesSketch.ToList())
     </div>
-    <div class="table">
+    <div class="table" style="margin-bottom:60px">
         <h3 align="center">Список эскизов</h3>
         <table border="1">
             <tr>
@@ -23,6 +23,7 @@
                 <td>Материал</td>
                 <td>Стоимость</td>
                 <td>Описание</td>
+                <td>Фотография</td>
                 <td>Редактировать</td>
             </tr>
             @foreach (Sketchs t in Model)
@@ -34,6 +35,7 @@
                     <td>@t.Material</td>
                     <td>@t.Cost</td>
                     <td>@t.Description</td>
+                    <td><span data-id="@t.idSketch" id="seeimg" style="cursor:pointer">просмотр</span><div data-div-id="@t.idSketch" id="toggleImg" style="display:none;position:absolute;z-index:999"><img data-img-id="@t.idSketch" id="seeimgsrc" src="" width="100" height="100"></div></td>
                     <td style="background-color:brown"><span style="cursor:pointer;color:white" data-id="@t.idSketch" id="formatsketch">Ред.</span></td>
                 </tr>
             }

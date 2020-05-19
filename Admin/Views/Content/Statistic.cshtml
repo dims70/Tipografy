@@ -7,14 +7,13 @@
             </h1>
         </div>
         <div class="stat-counter">
-            <h1 style="color:green">Уникальные</h1>
-            <h1 style="color:orange">За сегодня</h1>
-            <h1 style="color:brown">Активные</h1>
+            <h1 style="color:green">Уникальные за сегодня</h1>
+            <h1 style="color:green;flex-basis:50%">@Model.Where(x => x.dateIn == DateTime.Today.Date).Count()</h1>
+            
         </div>
         <div class="stat-counter">
-            <h1 style="color:green">10</h1>
-            <h1 style="color:orange">20</h1>
-            <h1 style="color:brown">30</h1>
+            <h1 style="color:brown">Всего</h1>
+            <h1 style="color:brown;flex-basis:43%">@Model.Count()</h1>
         </div>
     </div>
 </div>

@@ -162,6 +162,7 @@
     <Content Include="Content\Images\left.jpg" />
     <Content Include="Content\Images\logo-info.png" />
     <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\logo2.png" />
     <Content Include="Content\Images\right.jpg" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />

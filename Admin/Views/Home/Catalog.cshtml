@@ -11,14 +11,14 @@
             foreach (Sketchs s in Model) {
             <div class="main-item">
                 <div class="photo">
-                    <img src="~/Images/@s.imagePath" alt="Загрузка..." width="200px" height="200px"/>
+                    <img src="~/Images/@s.imagePath" alt="Загрузка..." width="100%" height="100%"/>
                 </div>
                 <div class="name">
                     @s.Name
                 </div>
                 <div class="btn">
                     <div class="btn-buy">
-                        <a href="/Home/Buy/@s.idSketch" style="color:black">купить</a>
+                        <a href="/Home/Buy/@s.idSketch" style="color:black">заказать</a>
                     </div>
                     @if (ViewContext.RouteData.Values["action"].ToString() != "favorites")
                     {
@@ -27,7 +27,7 @@
                             if (Cart.getCart().Where(x=>x.idSketch==s.idSketch).Count() != 0)
                             {
                                     <div class="btn-izbr" style="cursor:pointer;background:yellow;text-align:center;">
-                                        <a data-id="@s.idSketch" style="display:block;">добавлено</a>
+                                        <a data-id="@s.idSketch" style="display:block;font-weight:bold">добавлено</a>
                                     </div>
                             }
                             else
@@ -47,7 +47,7 @@
                     else
                     {
                         <div class="btn-izbr" style="cursor:pointer;text-align:center">
-                            <a id="delfavorites" data-id="@s.idSketch" style="display:block">удалить</a>
+                            <a id="delfavorites" data-id="@s.idSketch" style="display:block;font-weight:bold">удалить</a>
                         </div>
                     }
                 </div>

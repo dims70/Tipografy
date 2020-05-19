@@ -52,7 +52,7 @@ function scrollHead() {
 
 $(window).scroll(function () {
     if ($(window).scrollTop() != 0) {
-        $('.topbody').html("<span id='topbody'>НАВЕРХ</span>");
+        $('.topbody').html("<span id='topbody'><i class='fa fa-angle-double-up' aria-hidden='true'></i></span>");
     }
     else {
         $('.topbody').html('<span style="color:white">2020</span>')

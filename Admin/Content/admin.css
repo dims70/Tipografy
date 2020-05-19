@@ -1,3 +1,7 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 a:link{
     text-decoration: none;
 }
@@ -15,7 +19,7 @@ body{
 .wrapper { 
 margin:0 auto;
 width: 1300px;
-height:700px;
+min-height:700px;
 }
 .main {
     display: inline-flex;
@@ -30,6 +34,8 @@ height:700px;
     justify-content:center;
     align-items:center;
     width:100%;
+    height:auto;
+    min-height:700px;
 }
 
 td{
@@ -38,7 +44,6 @@ td{
 
 .aside{
     width: 200px;
-    height: 100%;
     background: grey;
     position:relative;
 }
@@ -102,6 +107,7 @@ tr{
     display:flex;
     flex-direction:column;
     align-items:center;
+    height:auto;
 }
 .counter{
     display:flex;
@@ -113,7 +119,7 @@ tr{
 
 .stat-counter{
     display:inline-flex;
-    justify-content:space-evenly;
+    justify-content:space-around;
     width:100%;
 }
 .stats-text {
@@ -145,6 +151,7 @@ h2,h3{
 
 .table{
   padding-bottom:30px;
+  height:auto;
 }
 
 .form-addsketch div{
@@ -180,8 +187,8 @@ h2,h3{
 }
 
     .modal-form {
-        width: 300px;
-        height: 400px;
+        width: 400px;
+        height: auto;
         background: white;
         border-radius: 20px;
         position: fixed;

@@ -23,6 +23,7 @@ $('.main-r').on("click", "#formatsketch", function () {
         $('#material').val(data.material);
         $('#cost').val(data.cost);
         $('#desc').val(data.desc);
+        $('#imgsketch').attr('src', "/Images/"+data.path);
         //ВЫВОД ДАННЫХ В МОДАЛКУ ДЛЯ РЕДАКТИРОВАНИЯ
     });
     $(".modal").css('display', 'flex');
@@ -58,13 +59,14 @@ $('#orders').click(function () {
     });
 });
 
-$('.main-r').on('click','#userinfo',function () {
-    $('.data-user').slideToggle();
+$('.main-r').on('click', '#userinfo', function () {
+    var datauser = $(this).siblings('.data-user')
+    $(datauser).slideToggle();
 });
 
 //Удаление ордера
 $('.main-r').on('click', '.endorder', function () {
-    let id = $('#delorder').attr('data-id');
+    let id = $(this).attr('data-id');
     $.get("/Content/finishOrder", { "id": id }, function (data) {
     data;
     });
@@ -90,6 +92,25 @@ $('.main-r').on('click', '#answer', function () {
     $('#mail').val('Здрувствуйте, ' + thisel)
     $(".modal1").css('display', 'flex');
 });
+
+$('.main-r').on('click','#seeimg',function () {
+    var id = $(this).attr('data-id');
+    if ($(`[data-img-id="${id}"]`).attr('src') == "") {
+        $.ajax({
+            type: "GET",
+            url: "/Content/getSketch",
+            data: { id: id }
+        }).done(function (data) {
+            $(`[data-img-id="${id}"]`).attr("src", "/Images/" + data.path);
+        });
+        $(`[data-div-id="${id}"]`).slideToggle();
+    }
+    else {
+        $(`[data-div-id="${id}"]`).slideToggle();
+    }
+    
+});
+    
 
 //при успешном добавлении эскиза
 function SuccessAdd() {

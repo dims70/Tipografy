@@ -25,18 +25,22 @@ namespace Admin.Controllers
             var sketchs = db.Sketchs.ToList();
             return PartialView(sketchs);
         }
-        [HttpGet]
-        public ActionResult FormAddSketch(string name, string material, int typesketch, decimal cost, string desc)
-        {
-            db.Sketchs.Add(new Sketchs()
+        [HttpPost]
+        public ActionResult FormAddSketch(string name, string material, int typesketch, decimal cost, string desc, HttpPostedFileBase image)
+        {   if (image.ContentType.Contains("image/"))
             {
-                Name = name,
-                idTypeSketch = typesketch,
-                Material = material,
-                Cost = cost,
-                Description = desc
-            });
-            db.SaveChanges();
+                image.SaveAs(Server.MapPath("~/Images/" + image.FileName));
+                db.Sketchs.Add(new Sketchs()
+                {
+                    Name = name,
+                    idTypeSketch = typesketch,
+                    Material = material,
+                    Cost = cost,
+                    Description = desc,
+                    imagePath = image.FileName
+                });
+                db.SaveChanges();
+            }
             return new EmptyResult();
         }
 
@@ -51,7 +55,8 @@ namespace Admin.Controllers
                     idtypesketch = x.idTypeSketch,
                     material = x.Material,
                     cost = x.Cost,
-                    desc = x.Description
+                    desc = x.Description,
+                    path=x.imagePath
                 }).ToList()[0];
             return Json(res, JsonRequestBehavior.AllowGet);
         }

@@ -1,7 +1,7 @@
 ﻿/* ОБОЛОЧКА */
 * {
     box-sizing: border-box;
-    font-family: 'Microsoft Sans Serif',sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -15,8 +15,17 @@ body {
 }
 
 a:link, a:visited {
-    color: #20b47c;
+    color: #1e4234;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-buy, #favorites{
+    font-weight:bold;
+}
+
+#favorites{
+    text-align:center;
 }
 
 .wrapper {
@@ -33,12 +42,10 @@ a:link, a:visited {
 }
 
 #result {
-min-height:550px;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-background:darkorange;
 }
 
 #submit {
@@ -49,9 +56,11 @@ background:darkorange;
 }
 
 .header-menu {
-    flex-basis: 70%;
+    flex-basis: 80%;
     display: flex;
     justify-content: center;
+    background: blanchedalmond;
+    border-radius: 40px 0px 0px 40px;
 }
 
     .header-menu ul {
@@ -73,15 +82,18 @@ background:darkorange;
             height: min-content;
             cursor: pointer;
             color: #20b47c;
+            padding: 5px;
+            border-bottom: 2px solid darkslateblue;
+            font-size: larger;
         }
 
 
 .header-icon {
-    width: 80px;
+    width: 20%;
     height: 80px;
-    margin-left: 20px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
     .container {
@@ -113,7 +125,7 @@ background:darkorange;
 }
 
 .main-item {
-    width: 200px;
+    width: 400px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -123,7 +135,7 @@ background:darkorange;
 }
 
 .photo {
-    width: 200px;
+    width: 400px;
     height: 200px;
     background: grey;
     border-radius: 20px;
@@ -139,14 +151,14 @@ background:darkorange;
 
 .btn-buy {
     padding: 5px;
-    background: orangered;
+    background: #90d8f9;
     flex-basis: 48%;
     text-align: center;
 }
 
 .btn-izbr {
     flex-basis: 48%;
-    background: #20b47c;
+    background: #ffde70;
 }
     .btn-izbr a {
         display: block;
@@ -156,17 +168,21 @@ background:darkorange;
     }
 
 .footer {
-        width: 100%;
-        position: sticky;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-        height: 60px;
-        background: #20b47c;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    background: #503232;
 }
 
 .footer-container {
     width: 100%;
+    display:inline-flex;
+    justify-content:space-evenly;
+    align-content:center;
+
 }
 
 h2 {
@@ -175,7 +191,6 @@ h2 {
 }
 #link {
     cursor: pointer;
-    color: #20b47c;
 }
 /* ОБОЛОЧКА */
 
@@ -198,9 +213,9 @@ h2 {
 .index-container {
     height: 500px;
     width: 100%;
-    /*background: url('Images/fon1.jpg');
-    background-attachment: fixed;*/
-    background: burlywood;
+    background: url('Images/logo2.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
 }
 
 .description-first-index {
@@ -263,14 +278,14 @@ h2 {
 
 .index2-container {
     width: 100%;
-    height: 800px;
+    height: auto;
     background: url('Images/fon2.jpg');
     background-size: cover;
 }
 
 .index2-content {
     width: 100%;
-    height: 100%;
+    height: auto;
     background: rgba(0, 0, 0, 0.637);
     display: flex;
     flex-direction: column;
@@ -323,15 +338,22 @@ h2 {
 }
 
 .topbody {
-    height:60px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    flex-basis: 33%
 }
+
+
 #topbody {
     cursor: pointer;
     font-variant: small-caps;
     color: cornsilk;
+    padding: 14px;
+    border-radius: 50%;
+    font-size: 30px;
 }
 .index1-flex-item {
     display:inline-flex;
@@ -476,8 +498,8 @@ tbody{
 
 .tovar-info {
     width: 100%;
-    height: 100%;
-    background: antiquewhite;
+    height: auto;
+    background: #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -486,30 +508,35 @@ tbody{
 }
 
  .image-item { 
-width: 400px;
-height: 400px;
+width: auto;
+height: auto;
 margin-right:40px;
+margin-bottom:20px;
 display:flex;
 justify-content:center;
 align-items:center;
  }
- .item-info { 
-     height: 300px;
-     width:700px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
- }
+.item-info {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 34px;
+    border-radius:10px;
+    background: cornsilk;
+    padding: 10px;
+}
 .infobuy form {
     height: auto;
     width: auto;
     display: flex;
-    flex-direction:column;
-    background: cadetblue;
+    flex-direction: column;
+    background: #1c5224;
     border-radius: 20px;
-    align-items:space-around;
+    align-items: space-around;
     padding: 10px;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
     .infobuy form > div {

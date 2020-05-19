@@ -17,7 +17,6 @@ namespace Admin
 
         public int idSketch { get; set; }
 
-        [Required]
         [StringLength(10)]
         public string Size { get; set; }
 
